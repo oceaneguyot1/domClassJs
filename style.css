@@ -1,4 +1,12 @@
 .jsClassStyle{
-    color: coral;
+    color: white;
     font-weight: bold;
+}
+
+.jsClassStyleMap{
+    background-color: lightseagreen;
+}
+
+.jsClassStyleForeach{
+    text-transform: uppercase;
 }
