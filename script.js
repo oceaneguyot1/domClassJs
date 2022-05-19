@@ -1,13 +1,20 @@
 let divs = document.getElementsByClassName('jsClassSelector'); //retourne une collection d'élements
 
+var tab = [];
+
+tab[0] = "oceane";
+tab[1] = "guyot";
+tab[2] = "formatrice";
 
 for (let i = 0; i < divs.length; i++) {
-    let divIndiv = divs[i];
+    let divIndiv = divs[i]; //récupération de l'élément html
+
+    let idDivIndiv = divIndiv.id; //Récupérer l'id d'un élément
 
     //Ne pas oublier de les supprimer au fur et à mesure
     console.log('----------');
-    console.log(i);
-    console.log(divIndiv);
+    console.dir(divIndiv); //Récupérer le liste des propriété de l'élement
+    console.log(idDivIndiv);
     console.log('----------');
 
     if (i != 2) {
@@ -22,17 +29,24 @@ for (let i = 0; i < divs.length; i++) {
 
 let divsMap = Array.from(document.getElementsByClassName("jsClassSelector"));
 
-divsMap.map(element => {
-    element.classList.add('jsClassStyleMap');
+divsMap.map(data => {
+    data.classList.add('jsClassStyleMap');
 })
+
 
 
 let divForeach = document.querySelectorAll(".jsClassSelector"); //retourne une nodeList
 let divForeachIndiv = document.querySelector(".jsClassSelector"); //retourne une nodeList
 
-console.log(divForeach);
+console.log(divForeach[2]);
 console.log(divForeachIndiv);
 
 divForeach.forEach(element => {
     element.classList.add('jsClassStyleForeach');
+})
+
+
+//Changer la valeur d'un attribut html
+document.getElementById('inputTest').addEventListener('click',(e)=>{
+    document.getElementById('inputTest').type = "password";
 })
