@@ -11,6 +11,10 @@ for (let i = 0; i < divs.length; i++) {
 
     let idDivIndiv = divIndiv.id; //Récupérer l'id d'un élément
 
+    if(idDivIndiv === "inputTest"){
+
+    }
+
     //Ne pas oublier de les supprimer au fur et à mesure
     console.log('----------');
     console.dir(divIndiv); //Récupérer le liste des propriété de l'élement
@@ -50,3 +54,22 @@ divForeach.forEach(element => {
 document.getElementById('inputTest').addEventListener('click',(e)=>{
     document.getElementById('inputTest').type = "password";
 })
+
+
+
+
+
+//test REGEX
+let texte = "Wikipédia est une encyclopédie universelle et multilingue créée par Jimmy Wales et Larry Sanger le 15 janvier 2001.";
+
+
+let regex = /(é)/gm;
+
+console.log(texte.search(regex))
+
+let textear = texte.replace('é', '@');
+
+console.log(textear);
+
+let textesplit = texte.split(' ');
+console.log(textesplit);
